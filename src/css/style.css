@@ -1,0 +1,111 @@
+.hide {
+    display: none;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#mainMenu {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.flHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+
+.divisorHeader {
+    background: rgb(255, 181, 138);
+    background: linear-gradient(90deg, rgba(255, 181, 138, 1) 0%, rgba(255, 0, 92, 1) 100%);
+    height: 0.4rem;
+}
+
+#burguerMenu {
+    height: 5rem;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 3rem;
+    font-size: 3.5rem;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.logoContainer {
+    width: 12rem;
+    height: 5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.logoContainer h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.7rem;
+}
+
+.logo {
+    width: 6rem;
+    height: 4.8rem;
+    rotate: -14deg;
+    margin-top: 1rem;
+}
+
+.locaisProximos {
+    width: 20rem;
+    height: 4rem;
+    display: flex;
+}
+
+.pinLocation {
+    width: 4rem;
+    height: 4rem;
+}
+
+.locaisProximos h2 {
+    font-size: 1.6rem;
+}
+.burguerButton {
+    width: 5rem;
+    height: 5rem;
+}
+
+.thumb {
+    background-image: url('../images/outubrorosalaco.jpeg');
+    height: 46rem;
+    display: flex;
+    align-items: center;
+}
+
+.thumb .abordagem {
+    background-color: #fff;
+    width: 70rem;
+    height: auto;
+    border-radius: 3rem;
+    padding: 2rem;
+    margin-left: 5rem;
+}
+
+.thumb .abordagem h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+.thumb .abordagem h3 {
+    font-size: 2.8rem;
+    font-weight: 400;
+}
