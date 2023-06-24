@@ -43,6 +43,16 @@
     font-family: 'DM Sans', sans-serif;
 }
 
+.options a {
+    color: #000;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.options a:hover {
+    color: #ff005c;
+}
+
 .logoContainer {
     width: 12rem;
     height: 5rem;
@@ -93,7 +103,7 @@
 .thumb .abordagem {
     background-color: #fff;
     width: 70rem;
-    height: auto;
+    height: 31.4rem;
     border-radius: 3rem;
     padding: 2rem;
     margin-left: 5rem;
@@ -108,4 +118,105 @@
 .thumb .abordagem h3 {
     font-size: 2.8rem;
     font-weight: 400;
+}
+
+.dadosComImagem {
+    display: flex;
+    padding: 0 5rem;
+    margin: 2rem 0;
+    gap: 5rem;
+}
+
+.dadosComImagem .containerTexto {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 74rem;
+}
+
+.dadosComImagem h2{
+    font-size: 5rem;
+    font-family: 'DM Sans', sans-serif;
+    color: #3b4848;
+}
+
+.dadosComImagem p{
+    font-size: 2rem;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    color: #3b4848;
+    text-align: justify;
+}
+
+.dadosComImagem .campanhaTudoRosa{
+    width: 42rem;
+    height: 30rem;
+    border-radius: 2rem;
+}
+
+.dados {
+    width: 87vw;
+    padding: 0 5rem;
+}
+
+.dados h2{
+    font-size: 5rem;
+    font-family: 'DM Sans', sans-serif;
+    color: #3b4848;
+    padding-bottom: 1rem;
+}
+
+.dados p{
+    font-size: 2rem;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    color: #3b4848;
+    text-align: justify;
+}
+
+.division {
+    width: 90vw;
+    height: 0.2rem;
+    background-color: #ff4f63;
+    margin-left: 5rem;
+    margin-top: 4rem;
+}
+
+.dadosComImagemRepresentativa {
+    display: flex;
+    width: 95vw;
+    padding: 0 5rem;
+    align-items: center;
+}
+
+.dadosComImagemRepresentativa .containerDadosSinais {
+    width: 75rem;
+}
+
+.dadosComImagemRepresentativa h2 {
+    font-size: 4rem;
+    font-family: 'DM Sans', sans-serif;
+    color: #3b4848;
+    padding: 2rem 0;
+}
+
+.dadosComImagemRepresentativa h3 {
+    font-size: 3.4rem;
+    font-family: 'DM Sans', sans-serif;
+    color: #3b4848;
+    padding: 2rem 0;
+}
+
+.dadosComImagemRepresentativa p, .dadosComImagemRepresentativa ul li {
+    font-size: 2rem;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    color: #3b4848;
+    text-align: justify;
+}
+
+.dadosComImagemRepresentativa img {
+    width: 30rem;
+    height: 44rem;
+    margin-left: 6rem;
 }
