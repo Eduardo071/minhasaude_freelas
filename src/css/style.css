@@ -2,6 +2,69 @@
     display: none;
 }
 
+.menuOpen,
+.menuClose {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 5rem;
+    height: 3.7rem;
+    align-items: center;
+}
+
+.menuOpen:hover,
+.menuClose:hover {
+    cursor: pointer;
+}
+
+.menuOpen .first-line,
+.menuOpen .second-line,
+.menuOpen .third-line {
+    background: #000;
+    width: 5rem;
+    height: 0.25rem;
+    border-radius: 0.8rem;
+}
+
+
+.menuClose {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menuClose .first-line {
+    position: absolute;
+    z-index: -1;
+    background: #000;
+    width: 5rem;
+    height: 0.2rem;
+    border-radius: 0.8rem;
+    rotate: 45deg;
+    animation: openedMenu 0.4s;
+}
+
+.menuClose .second-line {
+    display: none;
+}
+
+.menuClose .third-line {
+    position: absolute;
+    z-index: -1;
+    background: #000;
+    width: 5rem;
+    height: 0.2rem;
+    border-radius: 0.8rem;
+    rotate: -45deg;
+    animation: openedMenu 0.4s;
+}
+
+@keyframes openedMenu {
+    0% {
+        rotate: 0deg;
+    }
+}
+
 #container {
     display: flex;
     flex-direction: column;
@@ -11,8 +74,9 @@
     display: flex;
     width: 100vw;
     flex-direction: column;
+    justify-content: left;
     background-color: #fff;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
 }
@@ -27,11 +91,82 @@
 .divisorHeader {
     background: rgb(255, 181, 138);
     background: linear-gradient(90deg, rgba(255, 181, 138, 1) 0%, rgba(255, 0, 92, 1) 100%);
-    height: 0.4rem;
+    height: 0.2rem;
+    z-index: 2;
 }
 
 #burguerMenu {
-    height: 5rem;
+    height: 3.7rem;
+    margin-left: 2rem;
+}
+
+#burguerMenuItens {
+    position: absolute;
+    left: 0;
+    display: none;
+    gap: 2rem;
+    flex-direction: column;
+    width: 37rem;
+    background: #fff;
+    height: 100vh;
+    padding-top: 3rem;
+    animation: slideLeftToDefault 0.7s;
+    box-shadow: 50px 50px 44px -14px #EC5078;
+}
+
+@keyframes slideLeftToDefault {
+    0% {
+        left: -50rem;
+    }
+}
+
+@keyframes slideRightToDefault {
+    100% {
+        left: -50rem;
+    }
+}
+
+#burguerMenuItens a {
+    font-size: 3.6rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    margin-left: 3rem;
+
+}
+
+#linkSaude {
+    color: #0cc0df;
+}
+
+#linkAlimentacao {
+    color: #7ed957;
+}
+
+#linkBeleza {
+    color: #ff5757;
+}
+
+#linkFitness {
+    color: #cb6ce6;
+}
+
+#linkFamilia {
+    color: #ffde59;
+}
+
+#linkBemEstar {
+    color: #737373;
+}
+
+#burguerMenuItens li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35rem;
+}
+
+#burguerMenuItens li img {
+    width: 3rem;
 }
 
 .options {
@@ -80,6 +215,10 @@
     display: flex;
 }
 
+.locaisProximos:hover {
+    cursor: pointer;
+}
+
 .pinLocation {
     width: 4rem;
     height: 4rem;
@@ -87,7 +226,9 @@
 
 .locaisProximos h2 {
     font-size: 1.6rem;
+    font-weight: 700;
 }
+
 .burguerButton {
     width: 5rem;
     height: 5rem;
@@ -98,6 +239,7 @@
     height: 46rem;
     display: flex;
     align-items: center;
+    margin-top: 12rem;
 }
 
 .thumb .abordagem {
@@ -134,13 +276,13 @@
     width: 74rem;
 }
 
-.dadosComImagem h2{
+.dadosComImagem h2 {
     font-size: 5rem;
     font-family: 'DM Sans', sans-serif;
     color: #3b4848;
 }
 
-.dadosComImagem p{
+.dadosComImagem p {
     font-size: 2rem;
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
@@ -148,7 +290,7 @@
     text-align: justify;
 }
 
-.dadosComImagem .campanhaTudoRosa{
+.dadosComImagem .campanhaTudoRosa {
     width: 42rem;
     height: 30rem;
     border-radius: 2rem;
@@ -159,14 +301,14 @@
     padding: 0 5rem;
 }
 
-.dados h2{
+.dados h2 {
     font-size: 5rem;
     font-family: 'DM Sans', sans-serif;
     color: #3b4848;
     padding-bottom: 1rem;
 }
 
-.dados p{
+.dados p {
     font-size: 2rem;
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
@@ -186,6 +328,7 @@
     display: flex;
     width: 95vw;
     padding: 0 5rem;
+    margin-bottom: 3rem;
     align-items: center;
 }
 
@@ -207,7 +350,12 @@
     padding: 2rem 0;
 }
 
-.dadosComImagemRepresentativa p, .dadosComImagemRepresentativa ul li {
+.list {
+    list-style-type: disc;
+}
+
+.dadosComImagemRepresentativa p,
+.list li {
     font-size: 2rem;
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
@@ -219,4 +367,197 @@
     width: 30rem;
     height: 44rem;
     margin-left: 6rem;
+}
+
+.dadosComImagemRepresentativa2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95vw;
+    padding: 0 5rem;
+    margin-bottom: 3rem;
+    align-items: center;
+
+}
+
+.dadosComImagemRepresentativa2 div {
+    width: 58vw;
+
+}
+
+.dadosComImagemRepresentativa2 h2 {
+    font-size: 4rem;
+    font-family: 'DM Sans', sans-serif;
+    color: #3b4848;
+    padding: 2rem 0;
+}
+
+.dadosComImagemRepresentativa2 p {
+    font-size: 2rem;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    color: #3b4848;
+    text-align: justify;
+}
+
+.dadosComImagemRepresentativa2 img {
+    width: 30rem;
+    margin-left: 9rem;
+}
+
+.paragrafoFinal, .sobreModalidades {
+    padding-top: 3rem; 
+}
+
+#medicamentos {
+    width: 29rem;
+}
+
+.especialistasContainer {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    padding: 0 5rem;
+}
+
+.especialistasContainer h2 {
+    font-size: 4rem;
+    font-family: 'DM Sans', sans-serif;
+    padding: 2rem 0;
+    color: #3b4848;
+}
+
+.especialistasContainer .containerImagensEspecialistas {
+    display: flex;
+    gap: 20rem;
+    justify-content: center;
+    align-items: baseline;
+    width: 90vw;
+}
+
+.especialistasContainer .containerImagensEspecialistas .dadosEspecialistas {
+    display: flex;
+    flex-direction: column;
+    width: 31rem;
+}
+
+.especialistasContainer .containerImagensEspecialistas .dadosEspecialistas img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 1rem;
+}
+
+.especialistasContainer .containerImagensEspecialistas .dadosEspecialistas h3{
+    font-size: 4rem;
+    margin-bottom: 0.7rem;
+}
+
+.especialistasContainer .containerImagensEspecialistas .dadosEspecialistas p{
+    font-size: 1.8rem;
+    font-family: 'Arimo', sans-serif;
+}
+
+.especialistasContainer .division {
+    background-color: #000;
+    margin: 5rem 0;
+    height: 0.1rem;
+}
+
+.linksUteis {
+    width: 95vw;
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.linksUteis h2 {
+    font-size: 4rem;
+}
+
+.linksUteis a{
+    color: #0cc0df;
+    font-size: 3rem;
+    font-family: 'DM Sans',sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.linksUteis .division {
+    background-color: #000;
+    margin: 5rem 0;
+    height: 0.05rem;
+}
+
+.referencias {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 77vw;
+    padding: 0 5rem;
+}
+
+.referencias h2 {
+    font-size: 4rem;
+}
+
+.referencias p {
+    font-size: 2.5rem;
+    font-family: 'Arimo', sans-serif;
+}
+
+.maisConteudo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.maisConteudo img{
+    width: 80vw;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95vw;
+    align-self: center;
+    margin-top: 5rem;
+}
+
+.rodape .logoFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.rodape .logoFooter .division{
+    position: absolute;
+    z-index: -1;
+    background-color: #000;
+    margin: 5rem 0;
+    height: 0.2rem;
+}
+
+.rodape .logoFooter .logoContainer {
+    background: #fff;
+    width: 27rem;
+}
+
+.rodape .logoFooter .logoContainer img {
+    width: 8rem;
+    height: 11rem;
+}
+
+.rodape .logoFooter .logoContainer h2 {
+    font-size: 5rem;
+    line-height: 4rem;
+}
+
+.rodape h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    width: 68vw;
+    padding-top: 8rem;
 }
